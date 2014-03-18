@@ -13,6 +13,7 @@ gem 'time_difference' # Get time difference between two dates
 gem 'jquery-rails'
 gem 'coffee-rails'
 gem 'sendgrid' # this is the gem that lets you send email
+gem 'pony'     # This makes sending email easier
 
 
 group :production do
