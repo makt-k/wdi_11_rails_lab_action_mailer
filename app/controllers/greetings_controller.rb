@@ -69,6 +69,6 @@ class GreetingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def greeting_params
-      params.require(:greeting).permit(:email, :content)
+      params.require(:greeting).permit(:visit_email, :visit_name, :subject, :content)
     end
 end

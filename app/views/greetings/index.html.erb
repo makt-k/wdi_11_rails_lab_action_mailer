@@ -3,10 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>Email</th>
+      <th>Visitor Email</th>
+      <th>Visitor Name</th>
+      <th>Subject</th>
       <th>Content</th>
-      <th></th>
-      <th></th>
       <th></th>
     </tr>
   </thead>
@@ -14,7 +14,9 @@
   <tbody>
     <% @greetings.each do |greeting| %>
       <tr>
-        <td><%= greeting.email %></td>
+        <td><%= greeting.visit_email %></td>
+        <td><%= greeting.visit_name %></td>
+        <td><%= greeting.subject %></td>
         <td><%= greeting.content %></td>
         <td><%= link_to 'Show', greeting %></td>
         <td><%= link_to 'Edit', edit_greeting_path(greeting) %></td>
