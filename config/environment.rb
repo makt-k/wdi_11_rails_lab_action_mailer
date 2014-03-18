@@ -5,8 +5,8 @@ require File.expand_path('../application', __FILE__)
 BooksAppWithMailer::Application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => '******' ,
-  :password => '*****' ,
+  :user_name => '***' ,
+  :password => '***' ,
   :domain => 'whatever_or_your_actual_domain',
   :address => 'smtp.gmail.com',
   :port => 587,

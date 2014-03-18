@@ -55,10 +55,16 @@ class BooksController < ApplicationController
 
   def sendbuyermessage
     @user = current_user
-    if user_signed_in?
-      Notifier.send_buyer_message(current_user).deliver
-      redirect_to books_path
-    end
+    email = @user.email
+    email = params[:email]
+    subject = params[:subject]
+    body = params[:body]
+    Pony.mail(to: @user.email, subject: "Your order has been placed.", body: "Thank you for your purchase.")
+    redirect_to :books, notice: "Email Sent"
+    # if user_signed_in?
+    #   Notifier.send_buyer_message(current_user).deliver
+    #   redirect_to books_path
+    # end
   end
 
   # DELETE /books/1
